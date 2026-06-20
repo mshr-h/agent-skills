@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Ingest"
+  short_description: "Ingest sources into the PKM wiki"
+  default_prompt: "Use $wiki-ingest to ingest this new source into the Vault wiki."
