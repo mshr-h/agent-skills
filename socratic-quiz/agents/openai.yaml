@@ -1,0 +1,4 @@
+interface:
+  display_name: "Socratic Quiz"
+  short_description: "日本語の短い質問で段階的に理解を深めるチューター"
+  default_prompt: "Use $socratic-quiz to help me understand this topic through short Japanese questions."
