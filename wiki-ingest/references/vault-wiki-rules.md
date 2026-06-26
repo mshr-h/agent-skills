@@ -6,7 +6,7 @@
 - Edit only `wiki/` by default.
 - Treat these paths as read-only: `raw/`, `tmp/`, `utility/`, `journals/`, `GTD/`, `Root.md`, `.obsidian/`, `.trash/`.
 - Never move, delete, reformat, or rename source files during ingestion.
-- A Codex attachment may be used as a read-only source only when the user explicitly names it as an exception source. Cite it with `（例外元ソース）`; do not move, copy, normalize, or edit the attachment.
+- A Codex attachment may be used as a read-only source only when the user explicitly names it as an attachment source. Do not move, copy, normalize, edit, or cite the full local attachment path in wiki pages.
 
 ## Wiki structure
 
@@ -51,14 +51,14 @@ Formatting constraints:
 
 ## Normal ingest
 
-When the user asks to ingest a file from `raw/` or `tmp/`, or explicitly authorizes a Codex attachment as an exception source:
+When the user asks to ingest a file from `raw/` or `tmp/`, or explicitly authorizes a Codex attachment as a source:
 
 1. Read the target source directly.
 2. Proceed without confirmation unless the user asks to review decisions interactively.
 3. Create `wiki/summaries/[YYYY-MM-DD-slug].md`.
 4. Prefer a date from the source file, article, or document; use the current date only when the source date cannot be determined.
 5. List concepts and entities that appear in the source.
-6. For concepts/entities, always write from the original `raw/`, `tmp/`, or explicitly authorized attachment exception source. Do not derive concept/entity claims from the summary.
+6. For concepts/entities, always write from the original `raw/`, `tmp/`, or explicitly authorized attachment source. Do not derive concept/entity claims from the summary.
 7. Update existing pages rather than creating duplicates.
 8. Create new concept/entity pages only when there is no existing page.
 9. If new source information conflicts with an existing page, keep both and mark the contradiction explicitly.
@@ -100,7 +100,7 @@ When appending to `wiki/log.md`:
 
 - Use Obsidian wiki links for internal sources and related pages.
 - Prefer links to the original source file in `raw/` or `tmp/` for concept/entity `## ソース` sections.
-- For explicitly authorized attachment exceptions, cite the absolute attachment path and add `（例外元ソース）`.
+- For explicitly authorized attachment sources, do not write full local attachment paths or old exception labels in wiki pages; use a neutral display name such as `- 添付テキスト「<タイトル>」` when a source entry is needed.
 - Use summaries for source overview and navigation, but not as the sole evidence for durable concept/entity claims.
 
 ## Final report
@@ -111,4 +111,4 @@ After ingestion, report:
 - Concept/entity pages created or updated.
 - Log entry added.
 - Any contradictions, skipped candidates, unreadable files, or wiki gaps.
-- Whether an attachment exception was used, and that `raw/` or `tmp/` remains preferable for long-term source preservation.
+- Whether an attachment source was used, and that `raw/` or `tmp/` remains preferable for long-term source preservation.
